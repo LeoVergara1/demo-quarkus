@@ -7,14 +7,22 @@ import javax.ws.rs.Path
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 
-@Path("/hello")
+@Path("/")
 class ExampleResource {
 
     @GET
+    @Path("/hello")
     @Produces(MediaType.TEXT_PLAIN)
-    String hello() {
-        def corresponsalList = Corresponsal.listAll()
-        println corresponsalList.dump()
+    String hello(){
+        "Hola mundo"
+    }
+
+    @GET
+    @Path("/corresponsalList")
+    @Produces(MediaType.APPLICATION_JSON)
+    List<Corresponsal> corresponsalList() {
+        List<Corresponsal> corresponsalList = Corresponsal.listAll()
         corresponsalList
     }
+
 }
