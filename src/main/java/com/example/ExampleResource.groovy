@@ -13,6 +13,8 @@ class ExampleResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     String hello() {
-        Corresponsal.findAll()
+        def corresponsalList = Corresponsal.listAll()
+        println corresponsalList.dump()
+        corresponsalList
     }
 }
