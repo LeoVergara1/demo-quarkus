@@ -1,5 +1,4 @@
 plugins {
-  id 'java'
   id 'io.quarkus'
   id 'groovy'
 }
@@ -7,14 +6,6 @@ plugins {
 repositories {
   mavenCentral()
   mavenLocal()
-}
-
-sourceSets {
-  main {
-    groovy {
-      srcDirs = ['src/main/java']
-    }
-  }
 }
 
 
@@ -25,7 +16,7 @@ dependencies {
   implementation 'io.quarkus:quarkus-jdbc-postgresql'
   implementation 'io.quarkus:quarkus-resteasy-jackson'
   implementation 'io.quarkus:quarkus-arc'
-  implementation 'org.codehaus.groovy:groovy:3.0.6'
+  implementation 'org.codehaus.groovy:groovy:3.0.8'
   testImplementation 'io.quarkus:quarkus-junit5'
   testImplementation 'io.rest-assured:rest-assured'
 }

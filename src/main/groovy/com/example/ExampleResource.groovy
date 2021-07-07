@@ -16,7 +16,7 @@ class ExampleResource {
   @Path("/hello")
   @Produces(MediaType.TEXT_PLAIN)
   String hello() {
-    "Hola mundo"
+    "Hola mundo cruel 22j2ssdd"
   }
 
   @GET
