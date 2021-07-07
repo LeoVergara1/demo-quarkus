@@ -1,6 +1,7 @@
 package com.example.entity
 
 import com.example.json.Cantidades
+import com.fasterxml.jackson.annotation.JsonRawValue
 import io.quarkus.hibernate.orm.panache.PanacheEntity
 
 import javax.persistence.Column
@@ -15,4 +16,7 @@ class Plazo extends PanacheEntity {
   @OneToOne
   @JoinColumn(name = "cotizador_id")
   Cotizador cotizaodor
+  @Column(columnDefinition = "json")
+  @JsonRawValue
+  String cantidades
 }

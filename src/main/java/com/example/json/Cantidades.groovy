@@ -1,5 +1,5 @@
 package com.example.json
 
-class Cantidades {
+class Cantidades implements Serializable {
   String item
 }
